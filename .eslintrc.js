@@ -31,6 +31,19 @@ module.exports = {
                 'typescript/no-non-null-assertion': 'off',
                 'import/prefer-default-export': 'off',
                 'max-len': 'off',
+                'no-unused-vars': [
+                    'off',
+                    {
+                        vars: 'all',
+                        args: 'after-used',
+                        ignoreRestSiblings: true,
+                    },
+                ],
+                semi: [
+                    'error',
+                    'never',
+                ],
+                'no-undef': 'off',
                 strict: 'off',
             },
         },
