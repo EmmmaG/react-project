@@ -3,22 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/core": "7.1.0",
     "@material-ui/core": "^3.9.2",
     "@svgr/webpack": "2.4.1",
+    "@types/enzyme": "^3.1.11",
+    "@types/enzyme-adapter-react-16": "^1.0.1",
+    "@types/jest": "^24.0.11",
     "@types/react-dom": "^16.8.3",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "9.0.0",
-    "babel-jest": "23.6.0",
-    "babel-loader": "8.0.4",
-    "babel-plugin-named-asset-import": "^0.2.2",
-    "babel-preset-react-app": "^5.0.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-runtime": "^6.25.0",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
     "css-loader": "1.0.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "5.6.0",
     "eslint-config-airbnb-typescript": "^1.1.0",
     "eslint-config-react-app": "^3.0.4",
@@ -31,9 +39,9 @@
     "fs-extra": "7.0.0",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
-    "jest": "23.6.0",
-    "jest-pnp-resolver": "1.0.1",
-    "jest-resolve": "23.6.0",
+    "jest": "^24.1.0",
+    "jest-enzyme": "^7.0.1",
+    "jest-fetch-mock": "^1.6.5",
     "mini-css-extract-plugin": "0.4.3",
     "node-sass": "^4.9.4",
     "optimize-css-assets-webpack-plugin": "5.0.1",
@@ -47,9 +55,11 @@
     "react-dev-utils": "^6.0.5",
     "react-dom": "^16.5.2",
     "react-scripts": "2.1.8",
+    "react-test-renderer": "^16.8.6",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
+    "ts-jest": "^22.4.6",
     "terser-webpack-plugin": "1.1.0",
     "typescript": "^3.3.4000",
     "url-loader": "1.1.1",
@@ -61,7 +71,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "node scripts/test.js"
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -72,47 +82,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "resolver": "jest-pnp-resolver",
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx}"
-    ],
-    "testEnvironment": "jsdom",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
   "devDependencies": {
     "@deloitte-digital-au/eslint-config": "^3.4.0",
     "@typescript-eslint/eslint-plugin": "1.0.0",

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<Header
+  classes={
+    Object {
+      "arrow": "Header-arrow-4",
+      "headerContainer": "Header-headerContainer-1",
+      "headerMainText": "Header-headerMainText-3",
+      "headerTitle": "Header-headerTitle-2",
+    }
+  }
+/>
+`;
