@@ -15,8 +15,6 @@ const styles = () => ({
 	},
 	headerTitle: {
 		color: 'white',
-		fontSize: '14px',
-		fontFamily: 'Lato, sans-serif',
 		position: 'absolute' as 'absolute',
 		top: '18px',
 		left: '40px',
@@ -24,7 +22,6 @@ const styles = () => ({
 	headerMainText: {
 		color: 'white',
 		fontSize: '50px',
-		fontFamily: 'Lato, sans-serif',
 		marginTop: '135px',
 	},
 	arrow: {

@@ -60,6 +60,7 @@ module.exports = {
         {
             files: [
                 'src/**/*.tsx',
+                'src/**/*.ts',
             ],
             rules: {
                 // We don't need this as this is caught by typescript compiler

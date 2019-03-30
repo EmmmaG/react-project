@@ -1,12 +1,24 @@
 import React, { Component } from 'react'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import Header from './components/Header'
+import LaunchMission from './views/LaunchMission'
+
+const THEME = createMuiTheme({
+	typography: {
+		fontFamily: 'Lato, Arial, sans-serif',
+		fontSize: 14,
+	},
+})
 
 export default class App extends Component {
-	render() {
+	public render() {
 		return (
-			<div className='App'>
-				<Header />
-			</div>
+			<MuiThemeProvider theme={THEME}>
+				<div className='App'>
+					<Header />
+					<LaunchMission />
+				</div>
+			</MuiThemeProvider>
 		)
 	}
 }
