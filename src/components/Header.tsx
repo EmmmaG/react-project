@@ -28,16 +28,29 @@ const styles = () => ({
 	arrowContainer: {
 		textAlign: 'center' as 'center',
 	},
+	/* eslint-disable quote-props */
 	arrow: {
 		height: '20px',
 		bottom: '30px',
 		position: 'absolute' as 'absolute',
+		'&:hover': {
+			cursor: 'pointer',
+		},
 	},
+	/* eslint-enable quote-props */
 })
 
 export interface Props extends WithStyles<typeof styles> {}
 
 export class Header extends React.Component<Props> {
+	private scrollToList = () => {
+		const scrollToList = document.getElementById('filter')
+
+		if (scrollToList) {
+			scrollToList.scrollIntoView({ block: 'start', behavior: 'smooth' })
+		}
+	}
+
 	public render() {
 		const { classes } = this.props
 
@@ -46,7 +59,7 @@ export class Header extends React.Component<Props> {
 				<Typography className={classes.headerTitle}>SPACE SAVVY</Typography>
 				<Typography className={classes.headerMainText}>Discover Space Missions</Typography>
 				<div className={classes.arrowContainer}>
-					<img src={down} className={classes.arrow} />
+					<img src={down} className={classes.arrow} onClick={this.scrollToList}/>
 				</div>
 			</div>
 		)

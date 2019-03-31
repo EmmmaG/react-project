@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { withStyles, WithStyles, Theme } from '@material-ui/core/styles'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import { Typography } from '@material-ui/core'
 import { Launch, Launchpad } from './LaunchDataInterfaces'
 import getYearOptions from '../utils/getYearOptions'
 import getLaunchpadOptions from '../utils/getLaunchpadOptions'
@@ -19,6 +20,15 @@ const styles = (theme: Theme) => ({
 		color: theme.palette.grey[600],
 		marginTop: '50px',
 	},
+	textContainer: {
+		textAlign: 'center' as 'center',
+		paddingTop: '50px',
+		paddingBottom: '50px',
+	},
+	text: {
+		fontSize: '20px',
+		color: theme.palette.grey[700],
+	},
 })
 
 export interface FilterData {
@@ -31,6 +41,7 @@ export interface FilterData {
 export interface Props extends WithStyles<typeof styles> {}
 export interface State {
 	launchesData: Launch[]
+	launchesDataBack: Launch[]
 	launchpadsData: Launchpad[]
 	isLoading: boolean
 	filterData: FilterData
@@ -40,8 +51,9 @@ export class LaunchMission extends React.Component<Props, State> {
 	constructor(props: Props) {
 		super(props)
 		this.state = {
-			launchesData: {} as any,
-			launchpadsData: {} as any,
+			launchesData: [],
+			launchesDataBack: [],
+			launchpadsData: [],
 			isLoading: true,
 			filterData: {
 				keywords: '',
@@ -63,8 +75,7 @@ export class LaunchMission extends React.Component<Props, State> {
 			.then(response => {
 				return response.json()
 			}).then(data => {
-				this.setState({ launchesData: data })
-				console.log('launchesData', data)
+				this.setState({ launchesData: data, launchesDataBack: data })
 			})
 
 		await fetch('http://localhost:8001/launchpads')
@@ -72,7 +83,6 @@ export class LaunchMission extends React.Component<Props, State> {
 				return response.json()
 			}).then(data => {
 				this.setState({ launchpadsData: data })
-				console.log('launchpadsData', data)
 			})
 
 		this.setState({ isLoading: false })
@@ -86,19 +96,24 @@ export class LaunchMission extends React.Component<Props, State> {
 				...filterData,
 				[filterProp]: value,
 			},
-		}, () => {
-			console.log('filterData', this.state.filterData)
 		})
 	}
 
 	private onFilterSearch= () => {
-		const { launchesData, filterData } = this.state
-		const filteredData = getFilteredData(launchesData, filterData)
+		const { launchesDataBack, filterData } = this.state
+
+		if (parseInt(filterData.maxYear, 10) < parseInt(filterData.minYear, 10)) {
+			alert('Invalid year range')
+			return
+		}
+		const filteredData = getFilteredData(launchesDataBack, filterData)
+
+		this.setState({ launchesData: filteredData })
 	}
 
 	private renderFilter = () => {
-		const { launchesData, launchpadsData, filterData } = this.state
-		const yearOptions = getYearOptions(launchesData)
+		const { launchesDataBack, launchpadsData, filterData } = this.state
+		const yearOptions = getYearOptions(launchesDataBack)
 		const launchpadOptions = getLaunchpadOptions(launchpadsData)
 
 		return (
@@ -154,7 +169,16 @@ export class LaunchMission extends React.Component<Props, State> {
 					!isLoading && (this.renderFilter())
 				}
 				{
-					!isLoading && <LaunchList launchesData={launchesData} launchpadsData={launchpadsData} />
+					!isLoading && !!launchesData.length && (
+						<LaunchList launchesData={launchesData} launchpadsData={launchpadsData} />
+					)
+				}
+				{
+					!isLoading && !launchesData.length && (
+						<div className={classes.textContainer}>
+							<Typography className={classes.text}>No launch matches with the filter</Typography>
+						</div>
+					)
 				}
 				{
 					!isLoading && <Footer />

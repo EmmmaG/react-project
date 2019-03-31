@@ -11,6 +11,8 @@ const styles = () => ({
 		textAlign: 'left' as 'left',
 		marginTop: '10px',
 		marginBottom: '20px',
+		marginRight: '20px',
+		display: 'inline-block',
 	},
 	select: {
 		height: '35px',

@@ -44,7 +44,7 @@ export class LaunchList extends React.Component<Props> {
 		const { classes, launchesData } = this.props
 
 		return (
-			<div className={classes.listContainer}>
+			<div className={classes.listContainer} id='launch-list'>
 				<div className={classes.titleContainer}>
 					<Typography className={classes.title}>{`Showing ${launchesData.length} Missions`}</Typography>
 				</div>

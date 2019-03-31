@@ -27,13 +27,21 @@ const styles = (theme: Theme) => ({
 export interface Props extends WithStyles<typeof styles> {}
 
 export class Footer extends React.Component<Props> {
+	private scrollToList = () => {
+		const scrollToList = document.getElementById('launch-list')
+
+		if (scrollToList) {
+			scrollToList.scrollIntoView({ block: 'start', behavior: 'smooth' })
+		}
+	}
+
 	public render() {
 		const { classes } = this.props
 
 		return (
 			<div className={classes.footerContainer}>
 				<Typography className={classes.copyRight}>Copyright © 2018 Space Savvy</Typography>
-				<Typography className={classes.backToTop}><u>Back to top</u></Typography>
+				<Typography className={classes.backToTop} onClick={this.scrollToList}><u>Back to top</u></Typography>
 			</div>
 		)
 	}

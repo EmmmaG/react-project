@@ -9,6 +9,8 @@ const styles = () => ({
 		textAlign: 'left' as 'left',
 		marginTop: '10px',
 		marginBottom: '20px',
+		marginRight: '20px',
+		display: 'inline-block',
 	},
 	textField: {
 		height: '35px',

@@ -6,13 +6,11 @@ import TextInput, { Props as TextInputProps } from '../components/TextInput'
 
 const styles = (theme: Theme) => ({
 	filterContainer: {
-		display: 'flex',
-		justifyContent: 'space-evenly',
-		alignItems: 'center',
 		backgroundColor: theme.palette.grey[100],
 		marginTop: '30px',
 		marginLeft: '35px',
 		marginRight: '35px',
+		paddingLeft: '20px',
 		borderBottom: `2px solid ${theme.palette.grey[300]}`,
 	},
 	/* eslint-disable quote-props */
@@ -63,7 +61,7 @@ public render() {
 	const { classes } = this.props
 
 	return (
-		<div className={classes.filterContainer}>
+		<div className={classes.filterContainer} id='filter'>
 			{this.renderTextInput()}
 			{this.renderDropdownSelects()}
 			{this.renderApplyButton()}
