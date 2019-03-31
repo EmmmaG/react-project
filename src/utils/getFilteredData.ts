@@ -1,6 +1,11 @@
 import { Launch } from '../views/LaunchDataInterfaces'
 import { FilterData } from '../views/LaunchMission'
 
+/**
+ * to filter launches data with given filter options
+ * @param launchesData data to be filtered
+ * @param filterData data from selected filter
+ */
 export default function getFilteredData(launchesData: Launch[], filterData: FilterData) {
 	let filteredData = launchesData
 	// filter by keywords

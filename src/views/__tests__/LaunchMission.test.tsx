@@ -2,15 +2,15 @@ import * as React from 'react'
 import { shallow } from 'enzyme'
 import idObj from 'identity-obj-proxy'
 
-import Header, { Props } from '../Header'
+import LaunchMission, { Props } from '../LaunchMission'
 
 const props: Props = {
 	classes: idObj,
 }
 
-describe('Header', () => {
+describe('LaunchMission', () => {
 	it('renders correctly', () => {
-		const wrapper = shallow(<Header {...props} />)
+		const wrapper = shallow(<LaunchMission {...props} />)
 		expect(wrapper).toMatchSnapshot()
 	})
 })

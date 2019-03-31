@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter renders correctly 1`] = `
+<Filter
+  classes={
+    Object {
+      "applyButton": "Filter-applyButton-2",
+      "filterContainer": "Filter-filterContainer-1",
+    }
+  }
+  keywords={
+    Object {
+      "onChange": [MockFunction],
+      "title": "Keywords",
+      "value": "keyyy",
+    }
+  }
+  launchPad={
+    Object {
+      "onChange": [MockFunction],
+      "options": Array [
+        Object {
+          "text": "launchPadText",
+          "value": "launchPadValue",
+        },
+      ],
+      "title": "Launch Pad",
+      "value": "launchPadValue",
+      "width": "220px",
+    }
+  }
+  maxYear={
+    Object {
+      "onChange": [MockFunction],
+      "options": Array [
+        Object {
+          "text": "maxyearText",
+          "value": "maxyearValue",
+        },
+      ],
+      "title": "Max Year",
+      "value": "maxyearValue",
+      "width": "110px",
+    }
+  }
+  minYear={
+    Object {
+      "onChange": [MockFunction],
+      "options": Array [
+        Object {
+          "text": "minyearText",
+          "value": "minyearValue",
+        },
+      ],
+      "title": "Min Year",
+      "value": "minyearValue",
+      "width": "110px",
+    }
+  }
+  onFilterSearch={[MockFunction]}
+/>
+`;

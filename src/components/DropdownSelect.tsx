@@ -42,6 +42,7 @@ export interface Props extends WithStyles<typeof styles> {
 
 export class DropdownSelect extends React.Component<Props> {
 	private handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+		console.log('eventtt:', event)
 		this.props.onChange(event.target.value)
 	}
 

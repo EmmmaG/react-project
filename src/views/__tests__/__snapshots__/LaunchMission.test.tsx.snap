@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LaunchMission renders correctly 1`] = `
+<LaunchMission
+  classes={
+    Object {
+      "loader": "LaunchMission-loader-2",
+      "loaderContainer": "LaunchMission-loaderContainer-1",
+      "text": "LaunchMission-text-4",
+      "textContainer": "LaunchMission-textContainer-3",
+    }
+  }
+/>
+`;

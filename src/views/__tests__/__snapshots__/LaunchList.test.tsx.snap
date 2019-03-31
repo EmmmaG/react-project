@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LaunchList renders correctly 1`] = `
+<LaunchList
+  classes={
+    Object {
+      "listContainer": "LaunchList-listContainer-1",
+      "title": "LaunchList-title-3",
+      "titleContainer": "LaunchList-titleContainer-2",
+    }
+  }
+  launchesData={
+    Array [
+      Object {
+        "flight_number": 1,
+        "launch_date_local": "2006-03-25T10:30:00+12:00",
+        "launch_site": Object {
+          "site_id": "kwajalein_atoll",
+          "site_name": "Kwajalein Atoll",
+        },
+        "payloads": Array [
+          Object {
+            "payload_id": "FalconSAT-2",
+          },
+        ],
+        "rocket": Object {
+          "rocket_id": "falcon1",
+          "rocket_name": "Falcon 1",
+          "rocket_type": "Merlin A",
+        },
+      },
+      Object {
+        "flight_number": 2,
+        "launch_date_local": "2007-03-25T10:30:00+12:00",
+        "launch_site": Object {
+          "site_id": "ccafs_slc_40---",
+          "site_name": "Kwajalein Atoll",
+        },
+        "payloads": Array [
+          Object {
+            "payload_id": "FalconSAT-3",
+          },
+        ],
+        "rocket": Object {
+          "rocket_id": "falcon1",
+          "rocket_name": "Falcon 2",
+          "rocket_type": "Merlin A",
+        },
+      },
+      Object {
+        "flight_number": 3,
+        "launch_date_local": "2008-03-25T10:30:00+12:00",
+        "launch_site": Object {
+          "site_id": "ccafs_slc_40---",
+          "site_name": "Kwajalein Atoll",
+        },
+        "payloads": Array [
+          Object {
+            "payload_id": "FalconSAT-33",
+          },
+        ],
+        "rocket": Object {
+          "rocket_id": "falcon1",
+          "rocket_name": "Falcon 3",
+          "rocket_type": "Merlin A",
+        },
+      },
+      Object {
+        "flight_number": 4,
+        "launch_date_local": "2009-03-25T10:30:00+12:00",
+        "launch_site": Object {
+          "site_id": "kwajalein_atoll",
+          "site_name": "Kwajalein Atoll",
+        },
+        "payloads": Array [
+          Object {
+            "payload_id": "FalconSAT-44",
+          },
+        ],
+        "rocket": Object {
+          "rocket_id": "falcon1",
+          "rocket_name": "Falcon 4",
+          "rocket_type": "Merlin A",
+        },
+      },
+      Object {
+        "flight_number": 5,
+        "launch_date_local": "2010-03-25T10:30:00+12:00",
+        "launch_site": Object {
+          "site_id": "kwajalein_atoll",
+          "site_name": "Kwajalein Atoll",
+        },
+        "payloads": Array [
+          Object {
+            "payload_id": "FalconSAT-55",
+          },
+        ],
+        "rocket": Object {
+          "rocket_id": "falcon1",
+          "rocket_name": "Falcon 5",
+          "rocket_type": "Merlin A",
+        },
+      },
+      Object {
+        "flight_number": 66,
+        "launch_date_local": "2011-03-25T10:30:00+12:00",
+        "launch_site": Object {
+          "site_id": "kwajalein_atoll",
+          "site_name": "Kwajalein Atoll",
+        },
+        "payloads": Array [
+          Object {
+            "payload_id": "FalconSAT-77",
+          },
+        ],
+        "rocket": Object {
+          "rocket_id": "falcon6",
+          "rocket_name": "Falcon 6",
+          "rocket_type": "Merlin A",
+        },
+      },
+    ]
+  }
+  launchpadsData={
+    Array [
+      Object {
+        "full_name": "Kwajalein Atoll",
+        "id": "kwajalein_atoll",
+      },
+      Object {
+        "full_name": "Cape Canaveral Air Force Station Space Launch Complex 40",
+        "id": "ccafs_slc_40",
+      },
+    ]
+  }
+/>
+`;

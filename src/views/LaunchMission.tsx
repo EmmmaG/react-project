@@ -86,6 +86,8 @@ export class LaunchMission extends React.Component<Props, State> {
 			})
 
 		this.setState({ isLoading: false })
+		console.log(this.state.launchesData)
+		console.log(this.state.launchpadsData)
 	}
 
 	private onFilterChange = (filterProp: keyof FilterData) => (value: string) => {

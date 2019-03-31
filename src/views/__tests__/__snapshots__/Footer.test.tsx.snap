@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<Footer
+  classes={
+    Object {
+      "backToTop": "Footer-backToTop-3",
+      "copyRight": "Footer-copyRight-2",
+      "footerContainer": "Footer-footerContainer-1",
+    }
+  }
+/>
+`;

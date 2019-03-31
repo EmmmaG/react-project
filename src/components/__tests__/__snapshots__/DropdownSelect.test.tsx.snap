@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownSelect renders correctly 1`] = `
+<DropdownSelect
+  classes={
+    Object {
+      "select": "DropdownSelect-select-2",
+      "selectContainer": "DropdownSelect-selectContainer-1",
+      "selectRoot": "DropdownSelect-selectRoot-3",
+      "title": "DropdownSelect-title-4",
+    }
+  }
+  onChange={[MockFunction]}
+  options={
+    Array [
+      Object {
+        "text": "first",
+        "value": "1",
+      },
+      Object {
+        "text": "second",
+        "value": "2",
+      },
+    ]
+  }
+  title="select"
+  value="1"
+  width="200px"
+/>
+`;
