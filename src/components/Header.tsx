@@ -23,6 +23,10 @@ const styles = () => ({
 		color: 'white',
 		fontSize: '50px',
 		marginTop: '135px',
+		textAlign: 'center' as 'center',
+	},
+	arrowContainer: {
+		textAlign: 'center' as 'center',
 	},
 	arrow: {
 		height: '20px',
@@ -41,7 +45,9 @@ export class Header extends React.Component<Props> {
 			<div className={classes.headerContainer}>
 				<Typography className={classes.headerTitle}>SPACE SAVVY</Typography>
 				<Typography className={classes.headerMainText}>Discover Space Missions</Typography>
-				<img src={down} className={classes.arrow} />
+				<div className={classes.arrowContainer}>
+					<img src={down} className={classes.arrow} />
+				</div>
 			</div>
 		)
 	}

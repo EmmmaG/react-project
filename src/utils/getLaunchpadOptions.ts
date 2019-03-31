@@ -1,5 +1,5 @@
-import { Launchpad } from '../LaunchDataInterfaces'
-import { Props as DropdownSelectProps } from '../../components/DropdownSelect'
+import { Launchpad } from '../views/LaunchDataInterfaces'
+import { Props as DropdownSelectProps } from '../components/DropdownSelect'
 
 /**
  * To grab launchPadOptions for filter from launchpadData fetched from server

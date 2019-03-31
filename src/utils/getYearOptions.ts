@@ -1,5 +1,5 @@
-import { Launch } from '../LaunchDataInterfaces'
-import { Props as DropdownSelectProps } from '../../components/DropdownSelect'
+import { Launch } from '../views/LaunchDataInterfaces'
+import { Props as DropdownSelectProps } from '../components/DropdownSelect'
 
 export function getUnique(value: number, index: number, self: number[]) {
 	return self.indexOf(value) === index

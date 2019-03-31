@@ -2,14 +2,19 @@ import * as React from 'react'
 import { withStyles, WithStyles, Theme } from '@material-ui/core/styles'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import { Launch, Launchpad } from './LaunchDataInterfaces'
-import getYearOptions from './utils/getYearOptions'
-import getLaunchpadOptions from './utils/getLaunchpadOptions'
-import getFilteredData from './utils/getFilteredData'
+import getYearOptions from '../utils/getYearOptions'
+import getLaunchpadOptions from '../utils/getLaunchpadOptions'
+import getFilteredData from '../utils/getFilteredData'
 
 import Filter from './Filter'
+import LaunchList from './LaunchList'
+import Footer from './Footer'
 
 
 const styles = (theme: Theme) => ({
+	loaderContainer: {
+		textAlign: 'center' as 'center',
+	},
 	loader: {
 		color: theme.palette.grey[600],
 		marginTop: '50px',
@@ -131,20 +136,28 @@ export class LaunchMission extends React.Component<Props, State> {
 
 	public render() {
 		const { classes } = this.props
-		const { isLoading } = this.state
+		const { isLoading, launchesData, launchpadsData } = this.state
 
 		return (
 			<div>
 				{
 					isLoading && (
-						<CircularProgress
-							className={classes.loader}
-							size={100}
-							variant='indeterminate' />
+						<div className={classes.loaderContainer}>
+							<CircularProgress
+								className={classes.loader}
+								size={100}
+								variant='indeterminate' />
+						</div>
 					)
 				}
 				{
 					!isLoading && (this.renderFilter())
+				}
+				{
+					!isLoading && <LaunchList launchesData={launchesData} launchpadsData={launchpadsData} />
+				}
+				{
+					!isLoading && <Footer />
 				}
 			</div>
 		)

@@ -14,9 +14,14 @@ export interface Launch {
     }
     launch_success: boolean
     links: {
-        article_link: string
-        mission_patch: string
-        video_link: string
+        article_link?: string
+        mission_patch?: string
+        presskit?: string
+        reddit_campaign?: string
+        reddit_launch?: string
+        reddit_media?: string
+        reddit_recovery?: string
+        video_link?: string
     }
     payloads: {
         customers: string[]
