@@ -26,7 +26,8 @@ const styles = () => ({
 		textAlign: 'center' as 'center',
 	},
 	arrowContainer: {
-		textAlign: 'center' as 'center',
+		display: 'flex',
+		justifyContent: 'center',
 	},
 	/* eslint-disable quote-props */
 	arrow: {

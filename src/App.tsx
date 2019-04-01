@@ -1,3 +1,5 @@
+import 'babel-polyfill'
+import 'isomorphic-fetch'
 import React, { Component } from 'react'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import Header from './components/Header'
